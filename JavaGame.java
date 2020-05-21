@@ -27,6 +27,7 @@ public class Game {
         while (gaming){
             printTable(table);
             gaming = checkWinner(table, symbol, player2);
+            if (!gaming){break;}
             symbol = "X";
             table = getCoordinates(player1, table, symbol);
             counter++;
@@ -36,6 +37,7 @@ public class Game {
             }
             printTable(table);
             gaming = checkWinner(table, symbol, player1);
+            if (!gaming){break;}
             symbol = "O";
             table = getCoordinates(player2, table, symbol);
 
@@ -75,7 +77,7 @@ public class Game {
         (table[2][0].equals(symbol) && table[2][1].equals(symbol) && table[2][2].equals(symbol)) ||
         (table[0][0].equals(symbol) && table[1][1].equals(symbol) && table[2][2].equals(symbol)) ||
         (table[2][0].equals(symbol) && table[1][1].equals(symbol) && table[0][2].equals(symbol))){
-            System.out.println(player + "has won!");
+            System.out.println(player + " has won!");
             gaming = false;
         }
 
