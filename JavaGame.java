@@ -9,7 +9,7 @@ public class Game {
                 {" ", " ", " "}
         };
         String player1;
-        String player2 = "Computer";
+        String player2;
         String symbol = "X";
         int counter = 0;
         Scanner usrinput = new Scanner(System.in);
@@ -17,12 +17,8 @@ public class Game {
         System.out.println("\n Boter Kaas en eieren  ---  The GAME \n");
         System.out.println("Name player 1:");
         player1 = usrinput.nextLine();
-        System.out.println("Multiplayer mode? y/n:");
-        String multi = usrinput.nextLine();
-        if (multi.equals("y")){
-            System.out.println("Name player 2:");
-            player2 = usrinput.nextLine();
-        }
+        System.out.println("Name player 2:");
+        player2 = usrinput.nextLine();
 
         while (gaming){
             printTable(table);
